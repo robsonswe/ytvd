@@ -3,8 +3,8 @@ from PyQt6.QtWidgets import QMainWindow, QMessageBox, QApplication
 from PyQt6.QtCore import QUrl, QTimer, pyqtSlot, QThread
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 
-from .download_manager import DownloadManager
-from .download_worker import DownloadWorker
+from core.download_manager import DownloadManager
+from core.download_worker import DownloadWorker
 from .download_manager_handler import DownloadManagerHandler
 from .ui_setup import (
     setup_browser, setup_buttons, setup_progress_bar, setup_layouts

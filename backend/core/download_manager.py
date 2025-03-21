@@ -11,7 +11,7 @@ from rich.console import Console
 from rich.live import Live
 from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, DownloadColumn, TransferSpeedColumn, TimeRemainingColumn
-from .constants import DOWNLOAD_DIRECTORY, OUTPUT_FORMATS, MAX_CONCURRENT_DOWNLOADS
+from constants import DOWNLOAD_DIRECTORY, OUTPUT_FORMATS, MAX_CONCURRENT_DOWNLOADS
 
 # Inicializa o console Rich
 console = Console()

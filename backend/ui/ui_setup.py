@@ -6,7 +6,7 @@ from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtCore import QUrl
 from PyQt6.QtGui import QIcon
 from PyQt6.QtWebEngineCore import QWebEngineSettings, QWebEngineProfile
-from .constants import CACHE_DIRECTORY
+from constants import CACHE_DIRECTORY
 
 def setup_browser(parent, home_url):
     """Configura e retorna a visualização do navegador."""
