@@ -6,3 +6,4 @@ rich
 pyqt6
 PyQt6-WebEngine
 eyed3
+python-dotenv

@@ -3,7 +3,7 @@ import ctypes
 from PyQt6.QtWidgets import QApplication, QMessageBox
 from PyQt6.QtGui import QIcon  # Import QIcon
 from modules.download_manager import DownloadManager
-from modules.main_window import BrowserWindow
+from modules.browser_window import BrowserWindow
 
 def main():
     # Set the application ID for Windows taskbar
