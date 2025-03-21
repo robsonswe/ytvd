@@ -16,6 +16,9 @@ echo.
 if not exist "venv" (
     echo Ambiente virtual nao encontrado. Criando um novo...
     python -m venv venv
+    set FIRST_RUN=1
+) else (
+    set FIRST_RUN=0
 )
 
 echo ==============================
@@ -24,6 +27,14 @@ echo ==============================
 echo.
 
 call venv\Scripts\activate.bat
+
+if %FIRST_RUN%==1 (
+    echo ==============================
+    echo  Instalando dependencias do requirements.txt...
+    echo ==============================
+    echo.
+    pip install -r requirements.txt
+)
 
 echo ==============================
 echo  Atualizando yt-dlp...
