@@ -9,6 +9,16 @@ echo.
 
 cd "%~dp0"
 echo ==============================
+echo  Verificando ambiente virtual...
+echo ==============================
+echo.
+
+if not exist "venv" (
+    echo Ambiente virtual nao encontrado. Criando um novo...
+    python -m venv venv
+)
+
+echo ==============================
 echo  Ativando ambiente virtual...
 echo ==============================
 echo.
