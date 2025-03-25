@@ -3,12 +3,12 @@ cd /d "%~dp0"
 
 set YTVD_FOLDER=YTVD2
 set VERSION_FILE=%YTVD_FOLDER%\version.txt
-set DOWNLOAD_ZIP=YouTubeDownloader.zip
+set DOWNLOAD_ZIP=YTVD2.zip
 set GITHUB_API_URL=https://api.github.com/repos/robsonswe/ytvd/releases/latest
 
 if not exist "%YTVD_FOLDER%" (
     echo Diretorio YTVD2 nao encontrado. Baixando a versao mais recente...
-    curl -L -o "%DOWNLOAD_ZIP%" https://github.com/robsonswe/ytvd/releases/latest/download/YouTubeDownloader.zip
+    curl -L -o "%DOWNLOAD_ZIP%" https://github.com/robsonswe/ytvd/releases/latest/download/YTVD2.zip
     powershell -Command "Expand-Archive -Path '%DOWNLOAD_ZIP%' -DestinationPath '%YTVD_FOLDER%' -Force"
     del "%DOWNLOAD_ZIP%"
     
@@ -30,7 +30,7 @@ if not exist "%YTVD_FOLDER%" (
         echo Nenhuma atualizacao disponivel.
     ) else (
         echo Atualizacao encontrada! Baixando os arquivos...
-        curl -L -o "%DOWNLOAD_ZIP%" https://github.com/robsonswe/ytvd/releases/latest/download/YouTubeDownloader.zip
+        curl -L -o "%DOWNLOAD_ZIP%" https://github.com/robsonswe/ytvd/releases/latest/download/YTVD2.zip
         powershell -Command "Expand-Archive -Path '%DOWNLOAD_ZIP%' -DestinationPath '%YTVD_FOLDER%' -Force"
         del "%DOWNLOAD_ZIP%"
         echo %REMOTE_VERSION% > "%VERSION_FILE%"
