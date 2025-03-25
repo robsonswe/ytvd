@@ -1,0 +1,4 @@
+# Exclude executables
+yt-dlp.exe
+ffmpeg.exe
+YouTubeDownloader.exe.WebView2/
