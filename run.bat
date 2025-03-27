@@ -1,6 +1,16 @@
 @echo off
 cd /d "%~dp0"
 
+echo Verificando instancias abertas do programa...
+echo ==============================
+tasklist /FI "IMAGENAME eq YouTubeDownloader.exe" 2>NUL | find /I /N "YouTubeDownloader.exe">NUL
+if "%ERRORLEVEL%"=="0" (
+    echo Fechando instancia anterior do programa...
+    taskkill /F /IM "YouTubeDownloader.exe" >nul 2>&1
+    timeout /t 2 /nobreak >nul
+)
+echo.
+
 :check_git_updates
 echo Verificando atualizacoes do repositorio...
 echo ==============================
