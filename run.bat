@@ -29,8 +29,8 @@ echo.
 
 echo Executando script de atualizacao...
 update-tool.exe ^
-    --ytvd-folder YTVD2 ^
-    --version-file version.txt ^
+    --ytvd-folder YTVD ^
+    --ytvd-exe YTVD\YouTubeDownloader.exe ^
     --zip-url https://github.com/robsonswe/ytvd/releases/latest/download/YTVD2.zip ^
     --api-url https://api.github.com/repos/robsonswe/ytvd/releases/latest
 if %ERRORLEVEL% NEQ 0 (
@@ -42,5 +42,5 @@ if %ERRORLEVEL% NEQ 0 (
 echo.
 echo Iniciando a aplicacao...
 echo ==============================
-cd /d "%~dp0\YTVD2"
+cd /d "%~dp0YTVD"
 start "" "YouTubeDownloader.exe"
